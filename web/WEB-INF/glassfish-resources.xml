@@ -6,7 +6,7 @@
         <property name="portNumber" value="1433"/>
         <property name="databaseName" value="MDS"/>
         <property name="User" value="sa"/>
-        <property name="Password" value="00000000"/>
+        <property name="Password" value="12341234"/>
         <property name="URL" value="jdbc:sqlserver://192.168.50.40:1433;databaseName=MDS"/>
         <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
     </jdbc-connection-pool>

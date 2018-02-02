@@ -108,7 +108,8 @@ public class EKF1TimerSessionBean {
     
     public static long timerValue = 0;
     public static boolean exchangeInProcess = false; 
-    public static String systemURL = "http://yoursite.net/";
+    public static String systemURL = "http://ekfgroup.com/";
+    //public static String systemURL = "http://ekfgroupcom.ekf.su/";
     private String mountImgPath = "/mnt/"; //Поменять при смене монтируемого каталога, а лучше монтировать сюда же))))
     public static boolean hasLong1CWait = false;
     public static boolean fullExchangeCircle = true;
@@ -268,7 +269,7 @@ public class EKF1TimerSessionBean {
                         } catch(Exception lge)  {
                             
                         }
-                        String url = systemURL+"get_json_data.php?ENTITY=BSECT";
+                        String url = systemURL+"bitrix/ekflibraries/corpbus/get_json_data.php?ENTITY=BSECT";
 
                         URL obj = new URL(url);
                         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -418,7 +419,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartPrAdd(List<CbNewPrFrom1cWprops > npwps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
         
@@ -668,7 +669,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartPrUpd(List<CbEkfgroupToUpdatedBx1c > upwps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
         
@@ -1005,7 +1006,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartPrDel(List<CbEkfroupDelFromBxView > dpwps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
         
@@ -1129,7 +1130,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartSectAdd(List<CbEkfgroupAdd1csectToBx > nswps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
  
@@ -1325,7 +1326,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartSectUpd(List<CbEkfgroupUpd1csectToBx > uswps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
  
@@ -2075,7 +2076,7 @@ public class EKF1TimerSessionBean {
     
     private boolean postMultipartSectDel(List<CbEkfgroupDel1csectFromBx > dswps)    {
         String charset = "UTF-8";
-        String requestURL = systemURL+"manipulate_data.php";
+        String requestURL = systemURL+"bitrix/ekflibraries/corpbus/manipulate_data.php";
         boolean reply=true;
         String sreply="";
         
@@ -2215,7 +2216,7 @@ public class EKF1TimerSessionBean {
                             cbLogsFacade.insertLog("INFO", "Лог перед запросом в сеть к данным ekfgroup.com", "Если за этими логами ничего не следует кроме (Timer condition worked и Bad full exchange circle) то запрос накрылся из-за недоступности сайта или отсутствия интернета, админы вы где?");
                         } catch(Exception lge)  { }
                         
-                        String url2 = systemURL+"get_json_data.php?ENTITY=1CSECT";
+                        String url2 = systemURL+"bitrix/ekflibraries/corpbus/get_json_data.php?ENTITY=1CSECT";
                         
                         //try {
                         //    cbLogsFacade.insertLog("INFO", "Start load bx_1csect", "Start load bx_1csect, url="+systemURL);
@@ -2556,7 +2557,7 @@ public class EKF1TimerSessionBean {
                     int insert_sql_cnt = 0;
                     try {
                         
-                        String url = systemURL+"get_json_data.php?ENTITY=1CPROD";
+                        String url = systemURL+"bitrix/ekflibraries/corpbus/get_json_data.php?ENTITY=1CPROD";
                         
                         //try {
                         //    cbLogsFacade.insertLog("INFO", "Start load bx_1cprod", "Start load bx_1cprod, url="+systemURL);
